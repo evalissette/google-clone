@@ -1,0 +1,238 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:white;
+}
+
+
+header{
+    width: 100%;
+    height: 60px;
+}
+
+/*nav está dentro del elemento header, IMPORTANTE poner espacio*/
+header nav{
+    /*flex - elemento flexible para llenar el espacio vacío, no mueve pixel*pixel, las propiedades de flex lo hace proporcional al espacio*/
+    display: flex;
+    /*justificar hacia la derecha*/
+    justify-content: flex-end;
+}
+
+/*la clase se debe llamar con un punto*/
+header nav .nav-right-section{
+    /*width: auto;
+    height: 37px;*/
+    width: 210px;
+    height: auto;
+    display: flex;
+    /*list-style es para eliminar puntitos*/
+    list-style: none;
+    justify-content: center;
+    /*Alinear los elementos según su horizontal*/
+    align-items: center ;
+}
+
+a{
+    /*Elimina la línea inferior del ancla*/
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*Las anclas dentro de nuestra lista*/
+nav .nav-right-section a{
+    margin-right: 15px;
+    /*padding: 7px;*/
+    color: rgb(21, 21,21);
+}
+
+/*Ícono de menú*/
+nav .nav-right-section .menu{
+    background-image: url(https://img.icons8.com/ios-glyphs/90/000000/circled-menu.png);
+    background-repeat: no-repeat;
+    width: 22px;
+    height: 22px;
+    margin-left: 10px;
+    background-size: contain;
+
+    
+}
+
+/*Imagen estilo*/
+nav .nav-right-section img{
+    border-radius: 60px;
+    margin-left: 20px;
+    width: 32px;
+    height: 32px;
+    /*background-size: contain;*/
+}
+
+/***************************************************************************/
+/*****************************************************************/
+/**************************************************/
+/*MAIN*/
+
+main{
+    /*Distancia entre el main y el header*/
+    margin-top: 5px;
+    text-align: center;
+}
+
+/*Sección logo*/
+main .main-logo{
+    width: 530px;
+    margin: 0 auto;
+    margin-bottom: 35px; 
+}
+
+/* Logo Google */
+main .main-logo img{
+    width: 272px;
+    height: 92px;
+}
+
+/*Sección input*/
+main .main-input{
+    width: 550px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+main .main-input-container{
+    width: 540px;
+    border-radius: 80px;
+    /*Crear borde afuera del input es decir el borde del contenedor*/
+    /*Solid es para el estilo de la línea*/
+    border: 1px solid #dfe1e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+main .main-input input{
+    /*Eliminar el borde*/
+    border: none;
+    width: 420px;
+    height: 40px;
+    /*Eliminar la línea cuando quiero input el texto*/
+    outline: none;
+}
+
+/*Las sixtaxis de interacción se escriben distinto*/
+.main-input-container:hover{
+    /*Valores: Top Right Bottom Left, color*/
+    box-shadow: 0 1px 6px 1px #20212447;
+}
+
+
+main .main-input .search-icon{
+    background-image: url("https://img.icons8.com/material-outlined/192/9b9b9b/search--v1.png");
+    width: 18px;
+    height: 18px;
+    margin-right: 15px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+main .main-input .micro-icon{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/726px-Google_mic.svg.png");
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+main .main-input .cam-icon{
+    background-image: url("https://static.wikia.nocookie.net/logopedia/images/2/2b/Google_Lens_2021.svg");
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+main .main-buttons{
+    width: 550px;
+    margin: 0 auto;
+}
+
+main .main-buttons div{
+    display: inline-block;
+
+}
+
+main .main-buttons button{
+    border: none;
+    background-color: #f8f9fa;
+    font-size: 14px;
+    height: 36px;
+    /*Bordes redondeados*/
+    border-radius: 4px;
+    /*Color de las letras antes del hover*/
+    color: #3c4043;
+    /*Margen interno*/
+    padding: 0 15px;
+    /*Margen entre botones*/
+    margin-right: 15px;
+    border: 1px solid #f8f9fa;
+    
+   
+    cursor: pointer;
+}
+
+/*Efecto hover como en el input*/
+.main-buttons button:hover{
+    /*Valores: Top Right Bottom Left, color*/
+    box-shadow: 0 1px 1px 0 rgb(0, 0,0, .1);
+    /*Cambia el borde al hacer hover*/
+    border: 1px solid #dadce0;
+    /*Cambia el color de las letras al hacer hover*/
+    color: #202124;
+}
+
+/***************************************************************************/
+/*****************************************************************/
+/**************************************************/
+/*FOOTER*/
+
+footer{
+    background-color: #f2f2f2;
+    width: 100%;
+    height: 50px;
+    /*Para que no se afecten los elementos hijos*/
+    position: absolute;
+    font-size: 13px;
+    border-top: 1px solid #e4e4e4;
+    /*para dividir en columnas*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    /*Bottom posiciona el footer al final*/
+    bottom: 0;
+}
+
+footer ul{
+    margin: 10px;
+    list-style: none;
+    display: flex;
+    padding-left: 0px;
+}
+
+
+footer .footer-left{
+    justify-self: left;
+}
+
+footer .footer-right{
+    justify-self: right;
+}
+
+footer ul a{
+    color: #70757a;
+    margin: 10px;
+}
