@@ -1,2 +1,2 @@
-# evalissette.github.io
+# evalissette.github.io/google-clone
 Google clone using HTML and CSS
